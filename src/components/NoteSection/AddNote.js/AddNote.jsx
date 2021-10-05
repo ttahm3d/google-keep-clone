@@ -4,7 +4,7 @@ import { FaPlusCircle } from "react-icons/fa";
 import { NotesContext } from "../../../context/NotesContext";
 import { ADD_NOTE } from "../../../constants/constants";
 
-const initialState = { title: "", description: "", tags: [] };
+const initialState = { title: "", description: "", tags: "" };
 
 const AddNote = () => {
 	const [form, setForm] = useState(initialState);
@@ -36,9 +36,7 @@ const AddNote = () => {
 					type="text"
 					placeholder="Tags"
 					value={form.tags}
-					onChange={(e) =>
-						setForm({ ...form, tags: e.target.value.split(" ") })
-					}
+					onChange={(e) => setForm({ ...form, tags: e.target.value })}
 				/>
 
 				<AddNoteButton type="submit" onClick={handleSubmit}>
