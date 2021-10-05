@@ -11,18 +11,27 @@ export const NotesContainer = styled.div`
 
 export const NoteCard = styled.div`
 	background-color: ${(props) => props.theme.bgClrLtr};
-	padding: 1rem;
+	padding: 2rem;
 	display: flex;
 	flex-direction: column;
 	border-radius: 0.8rem;
 	overflow: hidden;
 	width: 100%;
+	color: ${(props) => props.theme.fontClrDkr};
 
-	h3 {
-		margin-bottom: 0.5rem;
+	h2 {
+		margin: 0 0 0.5rem 0;
+		color: ${(props) => props.theme.fontClr};
 	}
 
 	p {
-		color: ${(props) => props.theme.fontClrLtr};
+		color: ${(props) => props.theme.fontClrDk};
+	}
+
+	small {
+		padding: 0.5rem;
+		margin: 1rem 0.8rem 0 0;
+		background-color: ${(props) => props.theme.bgClrLt};
+		border-radius: 0.8rem;
 	}
 `;

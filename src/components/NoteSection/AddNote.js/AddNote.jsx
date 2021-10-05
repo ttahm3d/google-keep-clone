@@ -9,15 +9,13 @@ const initialState = { title: "", description: "", tags: [] };
 const AddNote = () => {
 	const [form, setForm] = useState(initialState);
 
-	const { state, dispatch } = useContext(NotesContext);
+	const { dispatch } = useContext(NotesContext);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		dispatch({ type: ADD_NOTE, payload: form });
 		setForm(initialState);
 	};
-
-	console.log(state);
 
 	return (
 		<AddNoteContainer>
@@ -37,6 +35,7 @@ const AddNote = () => {
 				<input
 					type="text"
 					placeholder="Tags"
+					value={form.tags}
 					onChange={(e) =>
 						setForm({ ...form, tags: e.target.value.split(" ") })
 					}

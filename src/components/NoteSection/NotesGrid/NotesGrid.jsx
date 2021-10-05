@@ -13,11 +13,11 @@ const NotesGrid = () => {
 						<NoteCard key={index} r>
 							<h2>{note.title}</h2>
 							<p>{note.description}</p>
-							<p>
+							<div>
 								{note.tags.map((tag, i) => (
 									<small key={i}>#{tag}&nbsp;</small>
 								))}
-							</p>
+							</div>
 						</NoteCard>
 				  ))
 				: null}
