@@ -14,9 +14,12 @@ const NotesGrid = () => {
 							<h2>{note.title}</h2>
 							<p>{note.description}</p>
 							<div>
-								{note.tags.map((tag, i) => (
-									<small key={i}>#{tag}&nbsp;</small>
-								))}
+								{note.tags
+									.trim()
+									.split(" ")
+									.map((tag, i) => (
+										<small key={i}>#{tag}&nbsp;</small>
+									))}
 							</div>
 						</NoteCard>
 				  ))

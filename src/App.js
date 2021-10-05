@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import NoteSection from "./components/NoteSection";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./utils/theme";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
 	const [theme, setTheme] = useState("darkTheme");
@@ -12,6 +13,7 @@ const App = () => {
 			<GlobalStyles />
 			<Header theme={theme} setTheme={setTheme} />
 			<NoteSection />
+			<Footer />
 		</ThemeProvider>
 	);
 };
