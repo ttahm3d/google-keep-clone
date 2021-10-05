@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterComponent = styled.footer`
-	margin-top: 2rem;
+	margin-top: auto;
 	background-color: ${(props) => props.theme.bgClrDkr};
 	padding: 2rem 0;
 

@@ -10,22 +10,34 @@ const Footer = () => {
 			<Container>
 				<ul>
 					<li>
-						<a href="https://www.linkedin.com/in/tahirahmedt" rel="no-referrer">
+						<a
+							href="https://www.linkedin.com/in/tahirahmedt"
+							target="_blank"
+							rel="noreferrer">
 							<FaLinkedin /> LinkedIn
 						</a>
 					</li>
 					<li>
-						<a href="https://www.github.com/ttahm3d" rel="no-referrer">
+						<a
+							href="https://www.github.com/ttahm3d"
+							target="_blank"
+							rel="noreferrer">
 							<FaGithub /> Github
 						</a>
 					</li>
 					<li>
-						<a href="https://blog.tahirahmedt.com/" rel="no-referrer">
+						<a
+							href="https://blog.tahirahmedt.com/"
+							target="_blank"
+							rel="noreferrer">
 							<SiHashnode /> Blog
 						</a>
 					</li>
 					<li>
-						<a href="https://www.tahirahmedt.com/" rel="no-referrer">
+						<a
+							href="https://www.tahirahmedt.com/"
+							target="_blank"
+							rel="noreferrer">
 							<BiWorld /> Website
 						</a>
 					</li>

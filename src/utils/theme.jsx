@@ -10,7 +10,7 @@ export const lightTheme = {
 	bgClrLt: "hsla(0, 0%, 10%, 10%)",
 	bgClrLtr: "hsla(0, 0%, 90%, 25%)",
 	bgClrDk: "hsl(0, 0%, 85%)",
-	bgClrDkr: "hsla(0, 0%, 80%, 30%)",
+	bgClrDkr: "hsla(0, 0%, 80%, 20%)",
 	fontClr: "hsl(0, 0%, 9%)",
 	fontClrLt: "hsl(0, 0%, 20%)",
 	fontClrLtr: "hsl(0, 0%, 25%)",
