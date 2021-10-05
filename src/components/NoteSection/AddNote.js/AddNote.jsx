@@ -4,16 +4,20 @@ import { FaPlusCircle } from "react-icons/fa";
 import { NotesContext } from "../../../context/NotesContext";
 import { ADD_NOTE } from "../../../constants/constants";
 
-const AddNote = () => {
-	const [form, setForm] = useState({ title: "", description: "", tags: [] });
+const initialState = { title: "", description: "", tags: [] };
 
-	const { dispatch } = useContext(NotesContext);
+const AddNote = () => {
+	const [form, setForm] = useState(initialState);
+
+	const { state, dispatch } = useContext(NotesContext);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		dispatch({ type: ADD_NOTE, payload: form });
-		setForm({ title: "", description: "" });
+		setForm(initialState);
 	};
+
+	console.log(state);
 
 	return (
 		<AddNoteContainer>
@@ -30,6 +34,14 @@ const AddNote = () => {
 					placeholder="Description"
 					onChange={(e) => setForm({ ...form, description: e.target.value })}
 				/>
+				<input
+					type="text"
+					placeholder="Tags"
+					onChange={(e) =>
+						setForm({ ...form, tags: e.target.value.split(" ") })
+					}
+				/>
+
 				<AddNoteButton type="submit" onClick={handleSubmit}>
 					<FaPlusCircle />
 				</AddNoteButton>
