@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const NotesContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
+	padding: 1rem 0;
 	gap: 1rem;
 	margin: 1rem;
 	justify-content: space-around;
